@@ -76,12 +76,12 @@ of writing. Let's walk about it.
 In the Go runtime, a string is a
 [`stringStruct`][GoStringStruct] type:
 
-```go
+{{< highlight go >}}
 type stringStruct struct {
   str unsafe.Pointer
   len int
 }
-```
+{{< / highlight >}}
 
 It consists of `str`, a pointer to the block of memory
 where the actual bytes are located and `len`,
@@ -95,7 +95,7 @@ runtime is called `rawstring`. Here's how it's
 implemented as at the time of writing (comments in
 code are mine):
 
-```go
+{{< highlight go >}}
 func rawstring(size int) (s string, b []byte) {
   // 1. Allocate memory block the size of the
   //    string and return a pointer to it:
@@ -110,7 +110,7 @@ func rawstring(size int) (s string, b []byte) {
   //    actual data will be stored.
   *(*slice)(unsafe.Pointer(&b)) = slice{p, size, size}
 }
-```
+{{< / highlight >}}
 
 `rawstring` returns a string and a byte slice
 where the actual bytes of the string should be
@@ -202,7 +202,7 @@ allows you to create a slice and set the capacity
 of its underlying array. But remember strings are
 immutable and so there will never be a need to
 have an underlying array bigger that what's really
-needed for the actual string. Hence the 3-slice
+needed for the string's contents. Hence the 3-slice
 operator doesn't exist for strings.
 
 ## The [`strings`][GoStringsPackage] and [`strconv`][GoStrconvPackage] packages
