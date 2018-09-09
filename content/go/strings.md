@@ -27,8 +27,8 @@ of slices.
 I don't discuss string encoding. That's not in the
 runtime, the thing I explore. But I discuss common
 string operations that mimic slices such as length
-of a string (`len("go")`), `concatenation`
-(`"go" + "lang"`), `indexing` (`"golang"[0]`), and
+of a string (`len("go")`), concatenation
+(`"go" + "lang"`), indexing (`"golang"[0]`), and
 slicing (`"golang"[0:2]`). To be fair, indexing
 and slices are operations in their own rights,
 which means their availability on strings has
