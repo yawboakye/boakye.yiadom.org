@@ -217,9 +217,9 @@ $ monit reload
 It's a good feeling of liberation when you know
 your application will be restarted no matter how
 many times it goes down, and without manual
-intervention. Well, as long as monit itself stays
+intervention. Well, as long as Monit itself stays
 alive. As such I still check in once in a while
-(less frequently), to see how both Monit and my
+(but less frequently), to see how both Monit and my
 application are doing, and usually I see
 statistics like this
 
