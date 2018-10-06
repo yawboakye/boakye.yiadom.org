@@ -189,8 +189,8 @@ We have seen that after three parameters our
 ability to intuit deteriorates beyond repair.
 Anything lower than three and our intuition is
 good enough. For example, we can guess with 100%
-accuracy the order of arguments to a function that
-takes one or zero arguments. Great! We don't have
+accuracy the order of arguments to a zero- and
+single-parameter functions and we don't have
 to consult any documentations. At two, our
 accuracy drops to 50%. Trial and error makes
 sense here: if one ordering doesn't work the other
