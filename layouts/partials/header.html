@@ -28,6 +28,10 @@
 <link rel="stylesheet" href="/css/skeleton.css">
 <link rel="stylesheet" href="/css/custom.css">
 <link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
+<!--- Page-Specific JavaScript -->
+{{ if ne .Params.Javascript "" }}
+<script src="/js/{{ .Params.Javascript }}"></script>
+{{ end }}
 <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
 </head>
 <body>
