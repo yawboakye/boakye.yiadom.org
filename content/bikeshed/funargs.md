@@ -409,7 +409,6 @@ There's a [Hacker News thread for
 that][FuncParamsHN]_.
 
 [Arity]:        https://en.wikipedia.org/wiki/Arity/
-[FuncParamsHN]: https://news.ycombinator.com/
 [Elm]:          http://elm-lang.org/
 [TypefulLang]:  http://lucacardelli.name/papers/typefulprog.pdf
 [Haskell]:      https://www.haskell.org/
@@ -419,3 +418,4 @@ that][FuncParamsHN]_.
 [VarArgs]:      https://en.wikipedia.org/wiki/Variadic_function
 [namedtuple]:   https://docs.python.org/3/library/collections.html#namedtuple-factory-function-for-tuples-with-named-fields
 [GoVarArgs]:    https://github.com/golang/go/blob/bf9240681dec2664f6acc1695e517e985d2b85d3/src/go/types/typexpr.go#L453
+[FuncParamsHN]: https://news.ycombinator.com/item?id=18160370
