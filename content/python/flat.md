@@ -32,7 +32,7 @@ could be read and understood at the water cooler.
 Here's an example valid JSON:
 
 {{< highlight javascript >}}
-'{"versions":[1],"name":"json","text":true,"creator":{"name":"Doug"}}'
+'{"versions":[1],"name":"json","text":true,"creator":{"name":"Doug", "address":{"country":"USA"}}}'
 {{< /highlight >}}
 
 Pretty printed:
