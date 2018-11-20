@@ -5,6 +5,9 @@ theme = "hugo-zen"
 copyright = "2018 Yaw Boakye"
 pygmentsStyle = "trac"
 
+[author]
+name = "Yaw Boakye"
+
 [params]
 twitter = "https://twitter.com/ejnbo"
 github = "https://github.com/yawboakye"
