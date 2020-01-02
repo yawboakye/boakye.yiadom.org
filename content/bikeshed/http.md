@@ -173,7 +173,7 @@ examples of when we started to develop SDKs using
 the pattern described here. There has been a few
 improvements since they were first made. For
 example, where it's up to me, I no longer use
-[axios][4] and instead opt for [request][5]
+[axios][4] and instead opt for [request][5].
 
 Thank you.
 
