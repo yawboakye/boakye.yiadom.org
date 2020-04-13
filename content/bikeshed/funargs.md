@@ -259,12 +259,12 @@ rely heavily on (lightweight) types. They're
 Types, with their named fields, erase the
 necessity of positions.
 
-They're a pleasure to document. Even more to use
+They're a pleasure to document, use in conversations. Even more to use
 them. Take for example a hypothetical
 `send_email/1` function which sends, you guessed
 it, emails.
 
-conversations too. For a hypothetical `send_email/1`
+For a hypothetical `send_email/1`
 function, all we need for documentation as far as
 parameters are concerned is: `send_email/1` takes
 an `email` (with `email` hyperlinked to its
@@ -300,7 +300,7 @@ single-parameter functions. We need something more
 lightweight in Ruby.
 
 In the absence of lightweight, named data
-structures to pass to our functions, we should to
+structures to pass to our functions, we should turn to
 classes and methods. They can do a good job.
 For example, `send_email/8` easily becomes `send/0`
 on an Email class. With chain-able implementations
