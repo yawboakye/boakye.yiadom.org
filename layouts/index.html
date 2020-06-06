@@ -1,19 +1,20 @@
 {{ partial "header.html" . }}
 
 	<main role="main">
-{{ range (where .Data.Pages ".Params.hidefromhome" "!=" "true") }}
+{{ range (where .Pages ".Params.hidefromhome" "!=" "true") }}
 		<article itemscope itemtype="http://schema.org/Blog">
 			<h2 class="entry-title" itemprop="headline"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
 			<span class="entry-meta">
         <time
           itemprop="datePublished"
           datetime="{{ .Date.Format "2006-01-02" }}">
-          {{ .Date.Format "January 02, 2006" }}
         </time>
       </span>
-      <p>
-        {{ .Params.Abstract }}
-      </p>
+      <ul class="compact-articles-links">
+        {{ range .Pages.ByPublishDate }}
+        <li><a title="{{ .Params.Abstract }}" href="{{ .RelPermalink }}">{{ .Title }}</a> &mdash; {{.Date.Format "Jan 01, 2006"}}</li>
+        {{ end }}
+      </ul>
 		</article>
 {{ end }}
 	</main>

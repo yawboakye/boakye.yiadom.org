@@ -1,6 +1,5 @@
 body {
   font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #FCFCFC;
 }
 
 h1 { font-size: 2.1rem; }
@@ -76,3 +75,13 @@ header a {
   background: linear-gradient(to right, white, #E1E1E1, white);
 }
 
+.compact-articles-links {
+ list-style-type:'> ';
+ line-height:.9em;
+ font-size: .9em;
+}
+
+.compact-articles-links a {
+ color: black;
+ text-decoration: underline;
+}
