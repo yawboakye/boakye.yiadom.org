@@ -4,6 +4,7 @@ date = 2019-12-25T20:23:41+01:00
 slug = "env"
 abstract = "After writing tests for functions that depended on environment variables became a chore, we asked ourselves a few questions, and arrived at the conclusion that, in our application logic, we might be using environment variables the wrong way."
 +++
+
 Usually, the difference between environments are
 defined by _environment variables_. They define
 everything from the database(s) to connect to
@@ -19,6 +20,7 @@ environment variables to influence logic in
 different places. This is a story of how it made
 life difficult for us during tests and two
 solutions we have come up with to address it.
+
 ## Case
 Before the application starts, we load all
 environment variables (they are OS-level
@@ -72,8 +74,6 @@ runWithEnvAs (envOverwrites: object, func: () => any) {
   // now, run the function.
   try {
     func()
-  } catch (err) {
-    console.error(err)
   } finally {
     reset()
   }
@@ -92,6 +92,7 @@ describe('processTransaction', () => {
   })
 })
 {{</highlight>}}
+
 ## Complication
 On the surface, the problem was gone. We could now
 set and unset variables as and when we wanted, and
@@ -116,6 +117,7 @@ was code that used environment variables but
 didn't have to be tested for different values of
 the variable, but they too could benefit from
 whatever we eventually arrived at.
+
 ## Solution
 The fix was quite simple: update all functions
 that use environment variables implicitly to
@@ -169,4 +171,5 @@ remotest of places. I left this encounter asking
 myself what other principles do I expect to see in
 the large but have even more sane implication at
 the very low level? We're always learning.
+
 [0]: https://en.wikipedia.org/wiki/Dependency_injection
