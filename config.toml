@@ -11,3 +11,6 @@ name = "Yaw Boakye"
 [params]
 twitter = "https://twitter.com/ejnbo"
 github = "https://github.com/yawboakye"
+
+[markup.goldmark.renderer]
+unsafe= true
